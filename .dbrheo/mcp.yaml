@@ -1,0 +1,15 @@
+# MCP Configuration for DbRheo Project
+# This is a minimal example configuration
+
+mcp_servers:
+  # Example filesystem server (commented out by default)
+  # Uncomment and modify to enable
+  
+  # filesystem:
+  #   command: npx
+  #   args: 
+  #     - "@modelcontextprotocol/server-filesystem"
+  #     - "."  # Current directory
+  #   description: "Local filesystem access"
+  #   timeout: 30000
+  #   trust: false

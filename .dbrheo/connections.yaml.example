@@ -1,0 +1,60 @@
+# DbRheo 数据库连接配置示例
+# 
+# 使用说明：
+# 1. 复制此文件为 connections.yaml
+# 2. 根据实际情况修改连接参数
+# 3. 不要将包含真实密码的文件提交到版本控制
+#
+# 注意事项：
+# - SSH密钥文件路径使用绝对路径或相对于用户目录的路径（~/.ssh/xxx）
+# - 密码字段为可选，建议使用SSH密钥认证
+# - 保存的连接可通过 database_connect(action="load", alias="别名") 加载
+
+connections:
+  # 示例1：直连MySQL数据库
+  local_mysql:
+    connection_string: "mysql://root:password@localhost:3306/test_db"
+    type: "mysql"
+    description: "本地MySQL开发数据库"
+    saved_at: "2024-01-01T10:00:00"
+  
+  # 示例2：通过SSH隧道连接生产数据库
+  prod_mysql:
+    connection_string: "mysql://dbuser:dbpass@10.0.1.100:3306/production_db"
+    type: "mysql"
+    description: "生产环境MySQL数据库（通过跳板机）"
+    ssh_tunnel:
+      ssh_host: "bastion.company.com"
+      ssh_port: 22
+      ssh_user: "ec2-user"
+      ssh_key_file: "~/.ssh/production-key.pem"
+    saved_at: "2024-01-01T10:00:00"
+  
+  # 示例3：PostgreSQL数据库
+  analytics_pg:
+    connection_string: "postgresql://analyst:pass123@analytics-db.internal:5432/warehouse"
+    type: "postgresql"
+    description: "数据分析PostgreSQL数据库"
+    ssh_tunnel:
+      ssh_host: "jump.analytics.com"
+      ssh_user: "analyst"
+      ssh_key_file: "~/.ssh/analytics_rsa"
+    saved_at: "2024-01-01T10:00:00"
+  
+  # 示例4：SQLite本地数据库
+  local_sqlite:
+    connection_string: "sqlite:///./data/local.db"
+    type: "sqlite"
+    description: "本地SQLite测试数据库"
+    saved_at: "2024-01-01T10:00:00"
+  
+  # 示例5：云数据库（AWS RDS）
+  aws_rds:
+    connection_string: "mysql://admin:${DB_PASSWORD}@mydb.123456.us-east-1.rds.amazonaws.com:3306/myapp"
+    type: "mysql"
+    description: "AWS RDS MySQL实例（支持环境变量）"
+    ssh_tunnel:
+      ssh_host: "ec2-bastion.compute.amazonaws.com"
+      ssh_user: "ec2-user"
+      ssh_key_file: "~/.ssh/aws-bastion.pem"
+    saved_at: "2024-01-01T10:00:00"

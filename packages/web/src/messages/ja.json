@@ -1,0 +1,50 @@
+{
+  "app": {
+    "title": "AIコンテンツ信頼性エージェント",
+    "description": "AIが生成したコンテンツの真実性を検証",
+    "loading": "読み込み中..."
+  },
+  "chat": {
+    "placeholder": "メッセージを入力してください...",
+    "send": "送信",
+    "thinking": "考え中...",
+    "analyzing": "分析中..."
+  },
+  "tools": {
+    "ai_detector": "AI検出",
+    "image_verify": "画像検証",
+    "deepfake_detector": "ディープフェイク検出",
+    "c2pa_verify": "C2PA検証",
+    "compliance_report": "コンプライアンスレポート"
+  },
+  "status": {
+    "connecting": "接続中...",
+    "connected": "接続済み",
+    "disconnected": "切断済み",
+    "error": "エラー",
+    "retry": "再試行"
+  },
+  "analysis": {
+    "riskScore": "リスクスコア",
+    "evidence": "証拠",
+    "details": "詳細",
+    "suggestions": "推奨事項",
+    "viewOriginal": "オリジナルを表示",
+    "viewHeatmap": "ヒートマップ",
+    "viewComparison": "比較"
+  },
+  "messages": {
+    "userMessage": "ユーザーメッセージ",
+    "agentThinking": "エージェント思考",
+    "toolCall": "ツール実行",
+    "agentReply": "エージェント応答",
+    "systemAlert": "システム通知"
+  },
+  "files": {
+    "agentAccessibleFiles": "分析可能なファイル",
+    "uploadToServer": "サーバーにアップロード",
+    "uploading": "アップロード中",
+    "allFilesUploaded": "すべてのファイルがアップロード済みです",
+    "uploadSuccessMessage": "{count}個のファイルが正常にアップロードされました"
+  }
+}

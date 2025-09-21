@@ -1,0 +1,50 @@
+{
+  "app": {
+    "title": "AI Content Credibility Agent",
+    "description": "Verify the authenticity of AI-generated content",
+    "loading": "Loading..."
+  },
+  "chat": {
+    "placeholder": "Type your message...",
+    "send": "Send",
+    "thinking": "Thinking...",
+    "analyzing": "Analyzing..."
+  },
+  "tools": {
+    "ai_detector": "AI Detection",
+    "image_verify": "Image Verification",
+    "deepfake_detector": "Deepfake Detection",
+    "c2pa_verify": "C2PA Verification",
+    "compliance_report": "Compliance Report"
+  },
+  "status": {
+    "connecting": "Connecting...",
+    "connected": "Connected",
+    "disconnected": "Disconnected",
+    "error": "Error",
+    "retry": "Retry"
+  },
+  "analysis": {
+    "riskScore": "Risk Score",
+    "evidence": "Evidence",
+    "details": "Details",
+    "suggestions": "Suggestions",
+    "viewOriginal": "View Original",
+    "viewHeatmap": "Heatmap",
+    "viewComparison": "Comparison"
+  },
+  "messages": {
+    "userMessage": "User Message",
+    "agentThinking": "Agent Thinking",
+    "toolCall": "Tool Execution",
+    "agentReply": "Agent Reply",
+    "systemAlert": "System Alert"
+  },
+  "files": {
+    "agentAccessibleFiles": "Analyzable Files",
+    "uploadToServer": "Upload to Server",
+    "uploading": "Uploading",
+    "allFilesUploaded": "All files have been uploaded",
+    "uploadSuccessMessage": "{count} file(s) uploaded successfully"
+  }
+}

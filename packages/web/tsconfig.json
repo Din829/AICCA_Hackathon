@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["./src/*", "/app/src/*"],
+      "@/components/*": ["./src/components/*", "/app/src/components/*"],
+      "@/lib/*": ["./src/lib/*", "/app/src/lib/*"],
+      "@/hooks/*": ["./src/hooks/*", "/app/src/hooks/*"],
+      "@/store/*": ["./src/store/*", "/app/src/store/*"],
+      "@/i18n/*": ["./src/i18n/*", "/app/src/i18n/*"],
+      "@/messages/*": ["./src/messages/*", "/app/src/messages/*"],
+      "@/types/*": ["./src/types/*", "/app/src/types/*"]
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
+}

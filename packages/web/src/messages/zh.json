@@ -1,0 +1,50 @@
+{
+  "app": {
+    "title": "AI内容可信度代理",
+    "description": "验证AI生成内容的真实性",
+    "loading": "加载中..."
+  },
+  "chat": {
+    "placeholder": "请输入消息...",
+    "send": "发送",
+    "thinking": "思考中...",
+    "analyzing": "分析中..."
+  },
+  "tools": {
+    "ai_detector": "AI检测",
+    "image_verify": "图像验证",
+    "deepfake_detector": "深度伪造检测",
+    "c2pa_verify": "C2PA验证",
+    "compliance_report": "合规报告"
+  },
+  "status": {
+    "connecting": "连接中...",
+    "connected": "已连接",
+    "disconnected": "已断开",
+    "error": "错误",
+    "retry": "重试"
+  },
+  "analysis": {
+    "riskScore": "风险评分",
+    "evidence": "证据",
+    "details": "详情",
+    "suggestions": "建议",
+    "viewOriginal": "查看原图",
+    "viewHeatmap": "热力图",
+    "viewComparison": "对比"
+  },
+  "messages": {
+    "userMessage": "用户消息",
+    "agentThinking": "代理思考",
+    "toolCall": "工具执行",
+    "agentReply": "代理回复",
+    "systemAlert": "系统提示"
+  },
+  "files": {
+    "agentAccessibleFiles": "可分析文件",
+    "uploadToServer": "上传到服务器",
+    "uploading": "上传中",
+    "allFilesUploaded": "所有文件已上传完成",
+    "uploadSuccessMessage": "成功上传{count}个文件"
+  }
+}

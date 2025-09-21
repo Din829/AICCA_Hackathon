@@ -1,0 +1,16 @@
+# gcloudignore - 控制哪些文件上传到Cloud Build
+# 只排除node_modules
+**/node_modules/
+# 不要使用.gitignore
+#!include:.gitignore
+
+# 明确包含所有重要目录
+!packages/web/src/lib/
+!packages/web/src/lib/**
+!packages/api/
+!packages/api/**
+!packages/core/
+!packages/core/**
+!aicca_app.py
+!Dockerfile
+!requirements*.txt

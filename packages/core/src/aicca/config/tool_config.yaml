@@ -1,0 +1,190 @@
+# AICCA工具配置文件 - 避免硬编码，支持灵活配置
+# AI Content Credibility Agent Tool Configuration
+
+# AI内容检测配置
+ai_detector:
+  # 动态模型列表（可根据需要扩展）
+  supported_models:
+    text:
+      - GPT
+      - Claude
+      - Gemini
+      - LLaMA
+      - PaLM
+    image:
+      - StableDiffusion
+      - Midjourney
+      - DALL-E
+      - Imagen
+      - Firefly
+    audio:
+      - ElevenLabs
+      - WaveNet
+      - Tacotron
+  
+  # 检测阈值（可调整）
+  thresholds:
+    high_confidence: 0.75
+    medium_confidence: 0.45
+    low_confidence: 0.2
+    grammar_perfection_suspicious: 0.95
+    ai_generation_likely: 0.7
+    ai_generation_possible: 0.3
+  
+  # 分析权重（可优化）
+  weights:
+    text:
+      statistical_analysis: 0.25
+      language_patterns: 0.25
+      watermark_detection: 0.3
+      model_matching: 0.2
+    image:
+      noise_analysis: 0.2
+      frequency_analysis: 0.2
+      watermark_detection: 0.25
+      artifact_detection: 0.2
+      model_matching: 0.15
+    audio:
+      spectral_analysis: 0.3
+      prosody_analysis: 0.3
+      voiceprint_analysis: 0.2
+      anomaly_detection: 0.2
+
+# Deepfake检测配置
+deepfake_detector:
+  # 风险等级阈值
+  risk_levels:
+    extreme_high: 0.8
+    high: 0.6
+    medium: 0.4
+    low: 0.2
+  
+  # 检测权重
+  detection_weights:
+    image:
+      face_analysis: 0.4
+      texture_analysis: 0.3
+      lighting_analysis: 0.2
+      forensic_analysis: 0.1
+    video:
+      temporal_analysis: 0.25
+      face_tracking: 0.2
+      blink_analysis: 0.15
+      sync_analysis: 0.2
+      frame_analysis: 0.2
+    audio:
+      spectral_analysis: 0.3
+      prosody_analysis: 0.3
+      voiceprint_analysis: 0.2
+      anomaly_detection: 0.2
+  
+  # 支持的文件格式（可扩展）
+  supported_formats:
+    image: [.jpg, .jpeg, .png, .gif, .bmp, .webp, .tiff]
+    video: [.mp4, .avi, .mov, .mkv, .webm, .flv, .wmv]
+    audio: [.mp3, .wav, .m4a, .ogg, .flac, .aac, .wma]
+
+# 图像验证配置
+image_verify:
+  # 信任评分等级
+  trust_levels:
+    high_trust: 80
+    basic_trust: 60
+    questionable: 40
+    untrusted: 0
+  
+  # 评分规则（动态）
+  scoring_rules:
+    format_invalid: -30
+    metadata_suspicious: -20
+    editing_software_detected: -5
+    ai_high_probability: -40
+    ai_medium_probability: -20
+    manipulation_detected: -30
+  
+  # 支持的格式
+  supported_formats: [.jpg, .jpeg, .png, .gif, .bmp, .webp, .tiff, .raw]
+
+# C2PA凭证配置
+c2pa_credential:
+  # 信任等级
+  trust_scores:
+    full_compliance: 80
+    basic_compliance: 60
+    partial_compliance: 40
+    non_compliance: 0
+  
+  # 验证权重
+  verification_weights:
+    hash_valid: 0.4
+    signature_valid: 0.4
+    chain_valid: 0.2
+  
+  # 默认组织信息
+  default_organization: "AICCA System"
+  default_tool: "AICCA Content Trust Agent"
+
+# 合规报告配置
+compliance_report:
+  # 合规等级
+  compliance_levels:
+    full: 90
+    basic: 70
+    partial: 50
+    non_compliant: 0
+  
+  # 风险评分权重
+  risk_weights:
+    legal: 0.4
+    reputation: 0.35
+    technical: 0.25
+  
+  # 支持的法规（可动态添加）
+  regulations:
+    EU_AI_Act:
+      enabled: true
+      priority: high
+      penalty_factor: 0.06  # 最高6%营收
+    China_Deep_Synthesis:
+      enabled: true
+      priority: high
+      penalty_factor: 0.03
+    US_TAKE_IT_DOWN:
+      enabled: true
+      priority: medium
+      penalty_factor: 0.02
+    US_Section_230:
+      enabled: true
+      priority: low
+      penalty_factor: 0.01
+  
+  # 时限配置
+  timelines:
+    immediate: "立即"
+    within_48_hours: "48小时内"
+    within_30_days: "30天内"
+    within_60_days: "60天内"
+
+# 通用配置
+common:
+  # API超时设置（秒）
+  api_timeout: 30
+  
+  # 模拟模式（开发/演示用）
+  simulation_mode: true  # 设为false时使用真实API
+  
+  # 缓存设置
+  cache_enabled: true
+  cache_ttl: 3600  # 秒
+  
+  # 日志级别
+  log_level: INFO
+  
+  # 默认语言
+  default_language: zh_CN
+  
+  # 最大文件大小（MB）
+  max_file_size: 100
+  
+  # 并发处理数
+  max_concurrent_tasks: 5
